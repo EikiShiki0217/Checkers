@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
-app.use(express.static("E:/Hicheel/Buteelt/Checkers"));
+app.use(express.static("https://github.com/EiraiShiki0823/Checkers/blob/main"));
 
 app.listen(9091, () => {
     console.log("Listening on http port 9091");

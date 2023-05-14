@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background: rgb(95, 49, 0);
+    min-width: 1100px;
+}
+
+.game_area {
+    margin: 50px calc((100% - 1100px) / 2);
+    width: 1100px;
+    height: 800px;
+}
+
+.table {
+    width: 720px;
+    height: 720px;
+    float: left;
+    outline: 4px black solid;
+}
+
+.table .row {
+    width: 720px;
+    height: 90px;
+}
+
+.table .row .col {
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+
+.table .row .col.black {
+    background: #000;
+}
+
+.table .row .col.black.active {
+    box-shadow: inset 0 0 0 2px rgb(12, 0, 148), inset 0 0 0 3px rgba(12, 0, 148, 0.695), inset 0 0 0 4px rgba(12, 0, 148, 0.47), inset 0 0 0 6px rgba(12, 0, 148, 0.114);
+    cursor: pointer;
+}
+
+.table .row .col.black.eat {
+    box-shadow: inset 0 0 0 2px rgb(146, 146, 0), inset 0 0 0 3px rgba(146, 146, 0, 0.695), inset 0 0 0 4px rgba(146, 146, 0, 0.47), inset 0 0 0 6px rgba(12, 0, 148, 0.114);
+    cursor: pointer;
+}
+
+.table .row .col.red {
+    background: #840000;
+}
+
+.black_man {
+    background: url(images/black_man.png);
+    background-size: cover;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.black_king {
+    background: url(images/black_king.png);
+    background-size: cover;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.white_man {
+    background: url(images/white_man.png);
+    background-size: cover;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.white_king {
+    background: url(images/white_king.png);
+    background-size: cover;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.information_area {
+    border-radius: 10px;
+    outline: 3px rgb(208, 164, 116) solid;
+    float: right;
+    width: 300px;
+    height: 500px;
+}
+
+.information_area h1 {
+    width: 200px;
+    margin: 20px calc((100% - 200px) / 2);
+    color: rgb(213, 146, 73);
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.name {
+    display: block;
+}
+
+.name label {
+    width: 200px;
+    margin: 10px calc((100% - 200px) / 2);
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: wheat;
+    text-shadow: 2px 2px 5px black;
+}
+
+.input_name {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 5px calc((100% - 220px) / 2);
+    background: rgb(255, 223, 190);
+    padding-left: 20px;
+    outline: 2px black solid;
+}
+
+.menu {
+    display: none;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background: rgb(229, 149, 63);
+    margin: 10px calc((100% - 200px) / 2) 15px calc((100% - 200px) / 2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px black solid;
+    font-size: 22px;
+    font-weight: bold;
+    transition-duration: 200ms;
+}
+
+.btn:hover {
+    background-color: rgb(235, 173, 108);
+    width: 205px;
+    margin: 10px calc((100% - 205px) / 2) 15px calc((100% - 205px) / 2);
+    transition-duration: 200ms;
+}
+
+.create_game {
+    display: none;
+    width: 100%;
+}
+
+.roomId {
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+    border: 2px black solid;
+    font-size: 20px;
+    text-align: center;
+    background: rgb(149, 77, 0);
+    margin: 10px calc((100% - 200px) / 2);
+    margin-bottom: 15px;
+}
+
+.roomId div {
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+}
+
+.roomId h1 {
+    width: 200px;
+    margin: 3px calc((100% - 200px) / 2);
+    text-shadow: 2px 2px 2px black;
+    font-size: 20px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    color: rgb(229, 184, 135);;
+}
+
+.playerLine {
+    width: 230px;
+    height: 50px;
+    background: rgb(149, 77, 0);
+    border: 2px black solid;
+    margin: 5px calc((100% - 230px) / 2);
+}
+
+.playerLine .white_man {
+    width: 36px;
+    height: 36px;
+    margin: 7px;
+    float: left;
+}
+
+.playerLine .playerName {
+    float: right;
+    width: 130px;
+    margin: 10px;
+    height: 30px;
+    font-size: 30px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.playerLine .black_man {
+    width: 36px;
+    height: 36px;
+    margin: 7px;
+    float: left;
+}
+
+.join_game {
+    display: none;
+}
+
+.roomList {
+    width: 230px;
+    height: 40px;
+    margin: 5px calc((100% - 230px) / 2);
+    background: rgb(149, 77, 0);
+    border: 2px black solid;
+    font-size: 30px;
+    text-align: end;
+    font-weight: bold;
+    padding-right: 10px;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.roomList:hover {
+    background-color: rgb(235, 173, 108);
+    transition-duration: 200ms;
+}
+
+.join_game h1 {
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+    border: 2px black solid;
+    font-size: 45px;
+    text-align: center;
+    text-shadow: none;
+    color: rgb(51, 46, 40);;
+    background: rgb(235, 173, 108);
+    margin: 10px calc((100% - 200px) / 2);
+    margin-bottom: 15px;
+}
+
+.turn {
+    display: none;
+}
+
+.current_turn {
+    background-color: rgb(235, 173, 108);
+}
